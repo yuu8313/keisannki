@@ -1,0 +1,24 @@
+:root {
+  --bg-primary: #1A1F2C;
+  --bg-secondary: #26175A;
+  --glass-bg: rgba(155, 135, 245, 0.1);
+  --glass-border: rgba(155, 135, 245, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.37);
+  
+  --btn-number: rgba(155, 135, 245, 0.3);
+  --btn-operator: rgba(217, 70, 239, 0.3);
+  --btn-function: rgba(255, 255, 255, 0.15);
+  --btn-memory: rgba(255, 255, 255, 0.1);
+  --btn-equals: rgba(139, 92, 246, 0.5);
+  
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  
+  --neon-glow: 0 0 10px rgba(155, 135, 245, 0.5),
+               0 0 20px rgba(155, 135, 245, 0.3),
+               0 0 30px rgba(155, 135, 245, 0.1);
+               
+  --neon-glow-intense: 0 0 15px rgba(155, 135, 245, 0.7),
+                       0 0 30px rgba(155, 135, 245, 0.5),
+                       0 0 45px rgba(155, 135, 245, 0.3);
+}

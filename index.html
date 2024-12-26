@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電卓</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator glass">
+            <div class="display-section">
+                <div class="history" id="history"></div>
+                <div class="main-display">
+                    <div class="memory-indicator" id="memoryIndicator"></div>
+                    <div class="expression" id="expression"></div>
+                    <div class="result" id="result">0</div>
+                </div>
+            </div>
+            <div class="unit-converter">
+                <select id="unitType" class="glass-select">
+                    <option value="none">単位変換なし</option>
+                    <option value="data">データ容量</option>
+                    <option value="length">長さ</option>
+                    <option value="weight">重さ</option>
+                </select>
+                <select id="unitFrom" class="glass-select">
+                    <option value="base">-</option>
+                </select>
+                <select id="unitTo" class="glass-select">
+                    <option value="base">-</option>
+                </select>
+            </div>
+            <div class="buttons-grid">
+                <button class="btn memory" data-action="mc">MC</button>
+                <button class="btn memory" data-action="mr">MR</button>
+                <button class="btn memory" data-action="ms">MS</button>
+                <button class="btn memory" data-action="m-plus">M+</button>
+                <button class="btn memory" data-action="m-minus">M-</button>
+                
+                <button class="btn function" data-action="clear"><i class="fas fa-trash-alt"></i></button>
+                <button class="btn function" data-action="backspace"><i class="fas fa-backspace"></i></button>
+                <button class="btn operator" data-action="sqrt"><i class="fas fa-square-root-alt"></i></button>
+                <button class="btn operator" data-action="divide"><i class="fas fa-divide"></i></button>
+                
+                <button class="btn number" data-value="7"><i class="fas fa-7"></i></button>
+                <button class="btn number" data-value="8"><i class="fas fa-8"></i></button>
+                <button class="btn number" data-value="9"><i class="fas fa-9"></i></button>
+                <button class="btn operator" data-action="multiply"><i class="fas fa-times"></i></button>
+                
+                <button class="btn number" data-value="4"><i class="fas fa-4"></i></button>
+                <button class="btn number" data-value="5"><i class="fas fa-5"></i></button>
+                <button class="btn number" data-value="6"><i class="fas fa-6"></i></button>
+                <button class="btn operator" data-action="subtract"><i class="fas fa-minus"></i></button>
+                
+                <button class="btn number" data-value="1"><i class="fas fa-1"></i></button>
+                <button class="btn number" data-value="2"><i class="fas fa-2"></i></button>
+                <button class="btn number" data-value="3"><i class="fas fa-3"></i></button>
+                <button class="btn operator" data-action="add"><i class="fas fa-plus"></i></button>
+                
+                <button class="btn function" data-action="toggle-sign"><i class="fas fa-plus-minus"></i></button>
+                <button class="btn number" data-value="0"><i class="fas fa-0"></i></button>
+                <button class="btn number" data-value=".">.</button>
+                <button class="btn equals" data-action="calculate"><i class="fas fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', 'Noto Sans JP', sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-border) var(--glass-bg);
+}
+
+/* Webkit（Chrome、Safari、Edge）用のスクロールバースタイル */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--glass-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+  border: 2px solid var(--glass-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 135, 245, 0.4);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox用のスクロールバースタイル */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-border) var(--glass-bg);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  padding: 10px;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: var(--glass-shadow);
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.glass-select {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 4px;
+  border-radius: 4px;
+  flex: 1;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.glass-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+@media (max-height: 700px) {
+  .glass {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-height: 600px) {
+  .glass {
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,100 @@
+@import './variables.css';
+
+.history {
+  height: 60px;
+  overflow-y: auto;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 5px;
+  text-align: right;
+}
+
+.main-display {
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 80px;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  background: rgba(155, 135, 245, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.memory-indicator {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.expression {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: right;
+  min-height: 20px;
+}
+
+.result {
+  font-size: 32px;
+  text-align: right;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-shadow: var(--neon-glow);
+}
+
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn i {
+  font-size: 1.2em;
+  position: relative;
+  z-index: 2;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn.number { background: var(--btn-number); }
+.btn.operator { background: var(--btn-operator); }
+.btn.function { background: var(--btn-function); }
+.btn.memory { background: var(--btn-memory); }
+.btn.equals { 
+  background: var(--btn-equals);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .result {
+    font-size: 28px;
+  }
+}

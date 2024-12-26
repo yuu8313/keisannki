@@ -1,0 +1,50 @@
+@keyframes trashIconTransform {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1.4) rotate(-45deg) translateY(-15px); }
+  40% { transform: scale(1.3) rotate(35deg) translateY(10px); }
+  60% { transform: scale(1.35) rotate(-25deg) translateY(-8px); }
+  80% { transform: scale(1.3) rotate(20deg) translateY(5px); }
+  100% { transform: scale(1.25) rotate(15deg) translateY(-3px); }
+}
+
+@keyframes backspaceIconTransform {
+  0% { transform: translateX(0) scale(1); }
+  20% { transform: translateX(-15px) scale(1.3) rotate(-25deg); }
+  40% { transform: translateX(12px) scale(1.4) rotate(20deg); }
+  60% { transform: translateX(-8px) scale(1.35) rotate(-15deg); }
+  80% { transform: translateX(5px) scale(1.3) rotate(10deg); }
+  100% { transform: translateX(-4px) scale(1.25) rotate(8deg); }
+}
+
+@keyframes sqrtIconTransform {
+  0% { transform: scale(1) translateY(0); }
+  20% { transform: scale(1.4) translateY(-20px) rotate(25deg); }
+  40% { transform: scale(1.3) translateY(15px) rotate(-20deg); }
+  60% { transform: scale(1.35) translateY(-10px) rotate(15deg); }
+  80% { transform: scale(1.3) translateY(8px) rotate(-10deg); }
+  100% { transform: scale(1.25) translateY(-5px) rotate(12deg); }
+}
+
+@keyframes toggleSignIconTransform {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.4) rotateX(270deg) translateY(-15px); }
+  40% { transform: scale(1.3) rotateY(270deg) translateY(12px); }
+  60% { transform: scale(1.35) rotate(270deg) translateY(-8px); }
+  80% { transform: scale(1.3) rotate(25deg) translateY(5px); }
+  100% { transform: scale(1.25) rotate(20deg) translateY(-4px); }
+}
+
+@keyframes equalsIconTransform {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1.5) rotate(25deg) translateY(-15px); }
+  40% { transform: scale(1.4) rotate(-25deg) translateY(12px); }
+  60% { transform: scale(1.45) rotate(20deg) translateY(-8px); }
+  80% { transform: scale(1.4) rotate(-15deg) translateY(5px); }
+  100% { transform: scale(1.35) rotate(10deg) translateY(-4px); }
+}
+
+.btn.function[data-action="clear"]:hover i { animation: trashIconTransform 2.5s forwards; }
+.btn.function[data-action="backspace"]:hover i { animation: backspaceIconTransform 2.5s forwards; }
+.btn.operator[data-action="sqrt"]:hover i { animation: sqrtIconTransform 2.5s forwards; }
+.btn.function[data-action="toggle-sign"]:hover i { animation: toggleSignIconTransform 2.5s forwards; }
+.btn.equals:hover i { animation: equalsIconTransform 2.5s forwards; }

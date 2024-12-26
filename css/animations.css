@@ -1,0 +1,112 @@
+@import './variables.css';
+@import './SVGanimation.css';
+@import './suuziSVGanimation.css';
+@import './kigouSVGanimation.css';
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(155, 135, 245, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(155, 135, 245, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(155, 135, 245, 0.3);
+  }
+}
+
+
+
+.result {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(155, 135, 245, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:active i {
+  transform: scale(0.9);
+}
+
+.btn.equals:hover {
+  animation: glowPulse 1.5s forwards;
+}
+
+.btn.memory:hover {
+  animation: memoryTextTransform 2.5s forwards;
+}
+
+.btn[data-value="."]:hover {
+  animation: decimalPointTransform 2.5s forwards;
+}
+
+.btn.number:hover {
+  animation: numberButtonTransform 2.5s forwards;
+}
+
+.btn.operator:hover {
+  animation: operatorButtonTransform 2.5s forwards;
+}
+
+.btn.function:hover {
+  animation: functionButtonTransform 2.5s forwards;
+}
+
+
+.result {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(155, 135, 245, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:active i {
+  transform: scale(0.9);
+}
+
+.btn.equals:hover {
+  animation: equalsButtonTransform 2.5s forwards, glowPulse 1.5s forwards;
+}
+
+.btn.memory:hover {
+  animation: memoryTextTransform 2.5s forwards;
+}
+
+.btn[data-value="."]:hover {
+  animation: decimalPointTransform 2.5s forwards;
+}
+
+.btn.number:hover {
+  animation: numberButtonTransform 2.5s forwards;
+}
+
+.btn.operator:hover {
+  animation: operatorButtonTransform 2.5s forwards;
+}
+
+.btn.function:hover {
+  animation: functionButtonTransform 2.5s forwards;
+}
